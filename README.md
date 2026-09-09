@@ -58,7 +58,3 @@ Example output:
    a b c d e f g h
 side: white
 ```
-
-## Author
-
-Zakaria El Mountassir
