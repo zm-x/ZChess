@@ -1,4 +1,4 @@
-NAME = zakaria_chess
+NAME = ZChess
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++17 -Iinclude
 
