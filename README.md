@@ -1,108 +1,209 @@
-# ZakariaChess
+<div align="center">
 
-A chess engine written in C++ as a learning project.
+<img src="ZChess.png" alt="ZChess Logo" width="180"/>
 
-The project is being built step by step. Each development version adds a real part of the engine and keeps the previous work working.
+# ZChess
+
+### A lightweight chess engine written in C++
+
+[![C++](https://img.shields.io/badge/C++-17-00599C?style=flat-square\&logo=cplusplus\&logoColor=white)](https://isocpp.org/)
+![Status](https://img.shields.io/badge/status-in%20development-F0A500?style=flat-square)
+![Platform](https://img.shields.io/badge/platform-Linux-lightgrey?style=flat-square\&logo=linux)
+
+</div>
+
+---
+
+## About
+
+**ZChess** is a chess engine written from scratch in **C++17**.
+
+The project started as a way to better understand how chess engines work internally, including board representation, move generation, legal move validation, search algorithms, and engine optimization.
+
+The goal is to build the engine progressively while keeping the code simple, readable, and easy to understand.
+
+---
 
 ## Development Progress
 
-- [x] Board representation
-- [x] Legal move generation
-- [x] Castling / En passant / Promotion
-- [x] Perft validation
-- [ ] Alpha beta search
-- [ ] UCI protocol
-- [ ] Graphical interface
-- [ ] Move animations
-- [ ] Transposition table
-- [ ] Iterative deepening
-- [ ] Time management
-- [ ] Opening book
+* [x] Board representation
+* [x] Legal move generation
+* [x] Castling / En passant / Promotion
+* [x] Perft validation
+* [ ] Alpha-beta search
+* [ ] UCI protocol
+* [ ] Graphical interface
+* [ ] Move animations
+* [ ] Transposition table
+* [ ] Iterative deepening
+* [ ] Time management
+* [ ] Opening book
 
-## Version 4
+---
 
-Version 4 focuses on **correct chess move generation**. The board can now generate legal moves, apply and undo them, handle the special chess rules, and validate the move generator with perft.
+## Current Features
 
-### Implemented
+ZChess currently supports:
 
-- 64 square board representation
-- FEN loading and export
-- Pawn, knight, bishop, rook, queen and king movement
-- Capture generation
-- Check detection
-- Legal move filtering
-- Make / unmake move
-- Castling on both sides
-- En passant
-- Pawn promotion to queen, rook, bishop or knight
-- Castling right updates
-- Halfmove and fullmove counters
-- UCI style move strings such as `e2e4` and `a7a8q`
-- Perft move generation validation
+* Standard 8×8 chess board representation
+* FEN parsing
+* Legal move generation
+* Check detection
+* Move validation
+* Castling
+* En passant
+* Pawn promotion
+* Make / unmake move logic
+* Perft testing
 
-The engine does **not** search for the best move yet. Search is the next major stage.
+---
+
+## Project Structure
+
+```text
+ZChess/
+├── include/
+│   └── chess.hpp
+│
+├── src/
+│   ├── chess.cpp
+│   └── main.cpp
+│
+├── tests/
+│   └── perft.sh
+│
+├── ZChess.png
+├── Makefile
+├── CMakeLists.txt
+└── README.md
+```
+
+---
 
 ## Build
 
+### Requirements
+
+* Linux
+* C++17 compatible compiler
+* Make
+
+Compile the project with:
+
 ```bash
 make
+```
+
+Run it with:
+
+```bash
 ./zakaria_chess
 ```
 
-The program prints the starting board and all 20 legal opening moves.
-
-## Perft
-
-Perft recursively counts all legal move sequences to a given depth. It is useful for finding bugs in chess move generation before adding the AI search.
+Clean generated files:
 
 ```bash
-./zakaria_chess --perft 1
-./zakaria_chess --perft 2
-./zakaria_chess --perft 3
-./zakaria_chess --perft 4
+make clean
 ```
 
-Expected results from the standard starting position:
+Rebuild everything:
 
-| Depth | Nodes |
-|------:|------:|
-| 1 | 20 |
-| 2 | 400 |
-| 3 | 8,902 |
-| 4 | 197,281 |
+```bash
+make re
+```
 
-Run the included test script:
+---
+
+## Perft Testing
+
+Perft is used to verify the correctness of the move generator.
+
+Run:
 
 ```bash
 ./tests/perft.sh
 ```
 
-Expected output:
+Or manually:
 
-```text
-[OK] depth 1 = 20
-[OK] depth 2 = 400
-[OK] depth 3 = 8902
-[OK] depth 4 = 197281
-All starting position perft tests passed.
+```bash
+./zakaria_chess --perft 4
 ```
 
-## Project Structure
+Expected result from the standard starting position:
 
 ```text
-.
-├── include/
-│   └── chess.hpp
-├── src/
-│   ├── chess.cpp
-│   └── main.cpp
-├── tests/
-│   └── perft.sh
-├── Makefile
-├── .gitignore
-└── README.md
+Depth 1: 20
+Depth 2: 400
+Depth 3: 8902
+Depth 4: 197281
 ```
 
-## Next Step
+These values are commonly used to validate chess move generators.
 
-The next development version will start the engine's decision making layer by adding position evaluation and search.
+---
+
+## Roadmap
+
+The next stages of development will focus on making ZChess capable of actually choosing strong moves.
+
+Planned work includes:
+
+```text
+Evaluation function
+        ↓
+Negamax search
+        ↓
+Alpha-beta pruning
+        ↓
+Move ordering
+        ↓
+UCI support
+        ↓
+Graphical interface
+        ↓
+Search optimizations
+```
+
+Later versions will explore more advanced techniques such as transposition tables, iterative deepening, quiescence search, better time management, and stronger positional evaluation.
+
+---
+
+## Why ZChess?
+
+The name combines:
+
+```text
+Z       → Zakaria
+Chess   → the engine itself
+```
+
+The logo also combines the shape of a chess knight with the letter **Z**.
+
+---
+
+## Author
+
+**Zakaria El Mountassir**
+
+Software Engineering Student at **1337 / 42 Network**
+
+GitHub: [zm-x](https://github.com/zm-x)
+
+LinkedIn: [zakaria-mountassire](https://www.linkedin.com/in/zakaria-mountassire/)
+
+---
+
+## Status
+
+ZChess is currently under active development.
+
+The engine is being built incrementally, with each version introducing new functionality and improving the previous implementation.
+
+---
+
+<div align="center">
+
+### `ZChess — built from the board up.`
+
+</div>
