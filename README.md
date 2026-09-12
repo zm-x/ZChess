@@ -1,6 +1,7 @@
 <div align="center">
 
 <img src="ZChess.png" alt="ZChess Logo" width="300"/>
+
 # ZChess
 
 </div>
