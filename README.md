@@ -1,13 +1,9 @@
 <div align="center">
 
 <img src="ZChess.png" alt="ZChess Logo" width="300"/>
-
 # ZChess
-
 </div>
-
 ---
-
 ## About
 
 **ZChess** is a chess engine written from scratch in **C++17**.
