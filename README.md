@@ -10,7 +10,7 @@ The project is being built step by step. Each development version adds a real pa
 - [x] Legal move generation
 - [x] Castling / En passant / Promotion
 - [x] Perft validation
-- [ ] Alpha-beta search
+- [ ] Alpha beta search
 - [ ] UCI protocol
 - [ ] Graphical interface
 - [ ] Move animations
@@ -25,7 +25,7 @@ Version 4 focuses on **correct chess move generation**. The board can now genera
 
 ### Implemented
 
-- 64-square board representation
+- 64 square board representation
 - FEN loading and export
 - Pawn, knight, bishop, rook, queen and king movement
 - Capture generation
@@ -35,10 +35,10 @@ Version 4 focuses on **correct chess move generation**. The board can now genera
 - Castling on both sides
 - En passant
 - Pawn promotion to queen, rook, bishop or knight
-- Castling-right updates
+- Castling right updates
 - Halfmove and fullmove counters
-- UCI-style move strings such as `e2e4` and `a7a8q`
-- Perft move-generation validation
+- UCI style move strings such as `e2e4` and `a7a8q`
+- Perft move generation validation
 
 The engine does **not** search for the best move yet. Search is the next major stage.
 
@@ -84,7 +84,7 @@ Expected output:
 [OK] depth 2 = 400
 [OK] depth 3 = 8902
 [OK] depth 4 = 197281
-All starting-position perft tests passed.
+All starting position perft tests passed.
 ```
 
 ## Project Structure
@@ -105,8 +105,4 @@ All starting-position perft tests passed.
 
 ## Next Step
 
-The next development version will start the engine's decision-making layer by adding position evaluation and search.
-
-## Author
-
-Zakaria El Mountassir
+The next development version will start the engine's decision making layer by adding position evaluation and search.
