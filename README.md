@@ -90,7 +90,7 @@ make
 Run it with:
 
 ```bash
-./zakaria_chess
+./ZChess
 ```
 
 Clean generated files:
@@ -120,7 +120,7 @@ Run:
 Or manually:
 
 ```bash
-./zakaria_chess --perft 4
+./ZChess --perft 4
 ```
 
 Expected result from the standard starting position:
