@@ -20,7 +20,7 @@ int main(int argc, char **argv)
         return 0;
     }
 
-    std::cout << "ZakariaChess - development version 4\n\n";
+    std::cout << "ZChess - development version 4\n\n";
     std::cout << board.pretty();
 
     std::vector<chess::Move> moves = board.generateLegalMoves();
@@ -32,6 +32,6 @@ int main(int argc, char **argv)
         if (i + 1 != moves.size())
             std::cout << ' ';
     }
-    std::cout << "\n\nRun ./zakaria_chess --perft <depth> to test move generation.\n";
+    std::cout << "\n\nRun ./ZChess --perft <depth> to test move generation.\n";
     return 0;
 }
