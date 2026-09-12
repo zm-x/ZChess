@@ -1,10 +1,8 @@
 <div align="center">
 
-<img src="ZChess.png" alt="ZChess Logo" width="180"/>
+<img src="ZChess.png" alt="ZChess Logo" width="300"/>
 
 # ZChess
-
-### A lightweight chess engine written in C++
 
 </div>
 
