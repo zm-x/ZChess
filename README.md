@@ -162,41 +162,8 @@ Later versions will explore more advanced techniques such as transposition table
 
 ---
 
-## Why ZChess?
-
-The name combines:
-
-```text
-Z       → Zakaria
-Chess   → the engine itself
-```
-
-The logo also combines the shape of a chess knight with the letter **Z**.
-
----
-
-## Author
-
-**Zakaria El Mountassir**
-
-Software Engineering Student at **1337 / 42 Network**
-
-GitHub: [zm-x](https://github.com/zm-x)
-
-LinkedIn: [zakaria-mountassire](https://www.linkedin.com/in/zakaria-mountassire/)
-
----
-
 ## Status
 
 ZChess is currently under active development.
 
 The engine is being built incrementally, with each version introducing new functionality and improving the previous implementation.
-
----
-
-<div align="center">
-
-### `ZChess — built from the board up.`
-
-</div>
