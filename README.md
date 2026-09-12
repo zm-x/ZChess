@@ -65,9 +65,7 @@ ZChess/
 ├── tests/
 │   └── perft.sh
 │
-├── ZChess.png
 ├── Makefile
-├── CMakeLists.txt
 └── README.md
 ```
 
