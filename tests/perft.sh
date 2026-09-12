@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-ENGINE="${1:-./zakaria_chess}"
+ENGINE="${1:-./ZChess}"
 
 check() {
     depth="$1"
