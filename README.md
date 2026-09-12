@@ -6,10 +6,6 @@
 
 ### A lightweight chess engine written in C++
 
-[![C++](https://img.shields.io/badge/C++-17-00599C?style=flat-square\&logo=cplusplus\&logoColor=white)](https://isocpp.org/)
-![Status](https://img.shields.io/badge/status-in%20development-F0A500?style=flat-square)
-![Platform](https://img.shields.io/badge/platform-Linux-lightgrey?style=flat-square\&logo=linux)
-
 </div>
 
 ---
